@@ -60,7 +60,7 @@ Let's explore the trac server and a few tickets:
 
 - configure git and obtain the source code ...
 
-- create *or* download a branch::
+- create *or* download a branch:
 ```
 git branch
 git clone URL
@@ -68,7 +68,7 @@ git clone URL
 
 - make changes: edit; rebuild; test; save (`git commit`)
 
-- share changes::
+- share changes:
 ```
 git push
 git pull
@@ -79,14 +79,14 @@ git pull
 
 - configure git, obtain the source code, **configure git-trac** ...
 
-- create *or* checkout a **ticket**::
+- create *or* checkout a **ticket**:
 ```
 git trac create 'fix bug in Sage'
 git trac checkout TICKETNUMBER
 ```
 - make changes: edit; rebuild (`sage -br`); test
 
-- share changes::
+- share changes:
 ```
 git commit
 git trac push [TICKETNUMBER]
@@ -152,7 +152,7 @@ cd git-trac-command
 python setup.py install
 ```
 
-- configure `git-trac`::
+- configure `git-trac`:
 ```
 git trac config --user username --pass password
 ```
