@@ -1,6 +1,6 @@
 # Contributing to SageMath
 
-From the `Sage Developer's Guide <http://doc.sagemath.org/html/en/developer/index.html>`__:
+From the [Sage Developer's Guide](http://doc.sagemath.org/html/en/developer/index.html):
 
 > Everybody who uses Sage is
 > encouraged to contribute
@@ -104,29 +104,28 @@ git trac pull
 ### Getting Ready 1: Sign up for a trac account
 
 Send an email to
-
-    `sage-trac-account@googlegroups.com <mailto:sage-trac-account@googlegroups.com>`_
-
+[sage-trac-account@googlegroups.com](mailto:sage-trac-account@googlegroups.com)
 with:
 
-    - your full name
-    - preferred username
-    - contact email
-    - and reason for needing a trac account
+- your full name
+- preferred username
+- contact email
+- and reason for needing a trac account
 
 ### Getting Ready 2: Generate and link SSH Keys
 
-- `Generate SSH keys for your computer <http://doc.sagemath.org/html/en/developer/trac.html#generating-your-ssh-keys>`_::
+- [Generate SSH keys for your computer](http://doc.sagemath.org/html/en/developer/trac.html#generating-your-ssh-keys>):
+```
+ssh-keygen
+```
 
-    ssh-keygen
+- [Link your SSH keys with your trac account](http://doc.sagemath.org/html/en/developer/trac.html#linking-your-public-key-to-your-trac-account>):
 
-- `Link your SSH keys with your trac account <http://doc.sagemath.org/html/en/developer/trac.html#linking-your-public-key-to-your-trac-account>`_:
-
-  #. Go to http://trac.sagemath.org
+  #. Go to [http://trac.sagemath.org](http://trac.sagemath.org)
   #. Log in with your trac username/password
   #. Click on "Preferences"
   #. Go to the "SSH Keys" tab
-  #. Paste the content of your public key file (e.g. ``~/.ssh/id_rsa.pub``)
+  #. Paste the content of your public key file (e.g. `~/.ssh/id_rsa.pub`)
   #. Click on "Save changes"
 
 *(You will need to do this once for each computer that you will use for
@@ -135,37 +134,42 @@ Sage development).*
 
 ### Getting Ready 3: Configure git and git-trac
 
-- install and configure `git <https://git-scm.com>`_::
+- install and configure [git](https://git-scm.com):
+```
+git config --global user.name "Your Name"
+git config --global user.email you@yourdomain.example.com
+```
 
-    git config --global user.name "Your Name"
-    git config --global user.email you@yourdomain.example.com
+- install [git-trac](https://github.com/sagemath/git-trac-command.git>):
+```
+git clone https://github.com/sagemath/git-trac-command.git
+cd git-trac-command
+python setup.py install
+```
 
-- install `git-trac <https://github.com/sagemath/git-trac-command.git>`_::
-
-    git clone https://github.com/sagemath/git-trac-command.git
-    cd git-trac-command
-    python setup.py install
-
-- configure ``git-trac``::
-
-    git trac config --user username --pass password
+- configure `git-trac`::
+```
+git trac config --user username --pass password
+```
 
 ### Getting Ready 4: Get the Sage source code
 
-- get a copy of (the development version) of the Sage source code::
+- get a copy of (the development version) of the Sage source code:
+```
+git clone git@trac.sagemath.org:sage.git
+cd sage
+git checkout develop
+```
 
-    git clone git@trac.sagemath.org:sage.git
-    cd sage
-    git checkout develop
-
-- build Sage::
-
-    make start
+- build Sage:
+```
+make start
+```
 
   *(this command will build Sage and test that Sage starts, but it will *not*
   build the documentation)*
 
-- while Sage builds, visit the `trac server <http://trac.sagemath.org>`__ and
-  look for tickets that you would like to try, review, work, ... or create
-  new tickets!
+- while Sage builds, visit the [trac server](http://trac.sagemath.org) and look
+  for tickets that you would like to try, review, work, ... or create new
+  tickets!
 
