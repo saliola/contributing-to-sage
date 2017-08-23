@@ -96,7 +96,7 @@ git trac pull
 
 ## Overview of the review process
 
-![Image of the review process](images/flowchart.png | width=400px)
+![Image of the review process](images/flowchart.png)
 
 
 ## Getting ready for Sage development
@@ -121,12 +121,12 @@ ssh-keygen
 
 - [Link your SSH keys with your trac account](http://doc.sagemath.org/html/en/developer/trac.html#linking-your-public-key-to-your-trac-account>):
 
-  #. Go to [http://trac.sagemath.org](http://trac.sagemath.org)
-  #. Log in with your trac username/password
-  #. Click on "Preferences"
-  #. Go to the "SSH Keys" tab
-  #. Paste the content of your public key file (e.g. `~/.ssh/id_rsa.pub`)
-  #. Click on "Save changes"
+    - Go to [http://trac.sagemath.org](http://trac.sagemath.org)
+    - Log in with your trac username/password
+    - Click on "Preferences"
+    - Go to the "SSH Keys" tab
+    - Paste the content of your public key file (e.g. `~/.ssh/id_rsa.pub`)
+    - Click on "Save changes"
 
 *(You will need to do this once for each computer that you will use for
 Sage development, including CoCalc projects if you choose to use CoCalc for
