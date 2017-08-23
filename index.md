@@ -173,3 +173,36 @@ make start
   for tickets that you would like to try, review, work, ... or create new
   tickets!
 
+
+## Tips and Tricks
+
+### checkout code from an old ticket without recompiling for hours
+
+If you checkout the branch associated with a ticket using the command
+```
+git trac checkout TICKETNUMBER
+```
+then your version of Sage will coincide with the version of Sage on which the
+branch is based. The big drawback here is that `make build` will compile an
+older version of Sage, which can take a very, very long time.
+
+Instead, you can attempt to merge the branch with the most recent version of
+develop:
+```
+git checkout develop
+git checkout -b t/TICKETNUMBER/TICKETNAME
+git trach fetch TICKETNUMBER
+git merge FETCH_HEAD
+[git trac push]
+```
+Here is a short description of the above commands:
+
+1. checkout the current develop branch of Sage
+2. create a new branch (based off develop) with the name `t/TICKETNUMBER/TICKETNAME`
+3. *fetch* the data associated with the branch on the ticket (but do not
+   actually create the branch)
+4. merge the fetched data into the current branch; this step might require
+   conflict resolution
+5. [optional, but good idea] share your changes: you updated the branch to the
+   latest development version, and other people will find this helpful
+
