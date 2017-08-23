@@ -96,6 +96,11 @@ git trac pull
 
 ## Overview of the review process
 
+See also the
+[Reviewer's check list](http://doc.sagemath.org/html/en/developer/reviewer_checklist.html)
+in the
+[Sage Developer's Guide](http://doc.sagemath.org/html/en/developer/index.html).
+
 ![Image of the review process](images/flowchart.png)
 
 
@@ -176,14 +181,14 @@ make start
 
 ## Tips and Tricks
 
-### checkout code from an old ticket without recompiling for hours
+### Checkout an old ticket without recompiling for hours
 
 If you checkout the branch associated with a ticket using the command
 ```
 git trac checkout TICKETNUMBER
 ```
 then your version of Sage will coincide with the version of Sage on which the
-branch is based. The big drawback here is that `make build` will compile an
+branch is based. The main drawback here is that `make build` will compile an
 older version of Sage, which can take a very, very long time.
 
 Instead, you can attempt to merge the branch with the most recent version of
