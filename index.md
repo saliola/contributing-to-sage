@@ -196,7 +196,7 @@ develop:
 ```
 git checkout develop
 git checkout -b t/TICKETNUMBER/TICKETNAME
-git trach fetch TICKETNUMBER
+git trac fetch TICKETNUMBER
 git merge FETCH_HEAD
 [git trac push]
 ```
