@@ -34,7 +34,7 @@ From the [Sage Developer's Guide](http://doc.sagemath.org/html/en/developer/inde
 
 - [Git](https://try.github.io/levels/1/challenges/1):
   To share changes with the Sage community, you will need to learn
-  about **revision control**; here is a [git cheat sheet](git-cheat-sheet.pdf).
+  about **revision control**; here is a [git cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf).
 
 
 ## trac server
